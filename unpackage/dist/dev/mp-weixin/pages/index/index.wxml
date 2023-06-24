@@ -1,1 +1,1 @@
-<view class="content">{{''+text+''}}<view>{{text}}</view><view><rich-text nodes="{{text}}"></rich-text></view></view>
+<view class="{{[text]}}" style="{{(style)}}">Hello JavaEdge</view>

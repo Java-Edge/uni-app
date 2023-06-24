@@ -1,13 +1,6 @@
 <template>
-    <view class="content">
-        {{text}}
-        <view class="" v-text="text">
-
-        </view>
-
-        <view class="" v-html="text">
-
-        </view>
+    <view :class="text" :style="style">
+        Hello JavaEdge
     </view>
 </template>
 
@@ -15,7 +8,8 @@
     export default {
         data() {
             return {
-                text: '<p>hello JavaEdge</p>'
+                style: "font-size:70px",
+                text: "content"
             }
         },
         onLoad() {
@@ -28,4 +22,7 @@
 </script>
 
 <style>
+    .content {
+        background-color: red;
+    }
 </style>
