@@ -1,6 +1,6 @@
 <template>
-    <view :class="text" :style="style">
-        Hello JavaEdge
+    <view class="content">
+       我是首页
     </view>
 </template>
 
@@ -8,15 +8,17 @@
     export default {
         data() {
             return {
-                style: "font-size:70px",
-                text: "content"
+                text: "Hello JavaEdge"
             }
         },
         onLoad() {
 
         },
         methods: {
-
+          click() {
+            console.log(this.text)
+            console.log("text")
+          }
         }
     }
 </script>
