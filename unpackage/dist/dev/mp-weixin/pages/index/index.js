@@ -135,33 +135,56 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-
+/* WEBPACK VAR INJECTION */(function(uni) {
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
-//
-//
-//
-//
-//
-//
+var tab = function tab() {
+  __webpack_require__.e(/*! require.ensure | components/tab */ "components/tab").then((function () {
+    return resolve(__webpack_require__(/*! ../../components/tab.vue */ 122));
+  }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+};
+var firstNav = function firstNav() {
+  __webpack_require__.e(/*! require.ensure | components/first-nav */ "components/first-nav").then((function () {
+    return resolve(__webpack_require__(/*! ../../components/first-nav.vue */ 129));
+  }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+};
+var videoList = function videoList() {
+  __webpack_require__.e(/*! require.ensure | components/videoList */ "components/videoList").then((function () {
+    return resolve(__webpack_require__(/*! ../../components/videoList.vue */ 136));
+  }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+};
 var _default = {
+  components: {
+    tab: tab,
+    firstNav: firstNav,
+    videoList: videoList
+  },
   data: function data() {
     return {
-      text: "Hello JavaEdge"
+      list: []
     };
   },
-  onLoad: function onLoad() {},
+  onLoad: function onLoad() {
+    this.getVideos();
+  },
   methods: {
-    click: function click() {
-      console.log(this.text);
-      console.log("text");
+    getVideos: function getVideos() {
+      var _this = this;
+      uni.request({
+        //请求数据
+        url: 'http://192.168.11.164:80/api/videos.json',
+        success: function success(res) {
+          _this.list = res.data.list;
+        }
+      });
     }
   }
 };
 exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
 

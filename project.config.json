@@ -1,16 +1,19 @@
 {
-  "description": "项目配置文件。",
+  "appid": "wxab2516b54640ec59",
+  "compileType": "miniprogram",
+  "libVersion": "2.32.3",
   "packOptions": {
     "ignore": [],
     "include": []
   },
   "setting": {
-    "urlCheck": false,
-    "es6": false,
-    "postcss": false,
-    "minified": false,
-    "newFeature": true,
-    "bigPackageSizeSupport": true,
+    "coverView": true,
+    "es6": true,
+    "postcss": true,
+    "minified": true,
+    "enhance": true,
+    "showShadowRootInWxmlPanel": true,
+    "packNpmRelationList": [],
     "babelSetting": {
       "ignore": [],
       "disablePlugins": [],
@@ -18,10 +21,6 @@
     },
     "condition": false
   },
-  "compileType": "miniprogram",
-  "libVersion": "2.32.3",
-  "appid": "touristappid",
-  "projectname": "uni-app",
   "condition": {},
   "editorSetting": {
     "tabIndent": "insertSpaces",
